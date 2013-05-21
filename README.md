@@ -4,8 +4,7 @@ EstCeQueCestBientot
 Description
 -----------
 
-EstCeQueCestBientot est une appli web destinée à...
-Inspirée de estcequecestbientotlheuredemanger.fr ou hasthelhcdestroyedtheearth.com, EstCeQueCestBientot est une application web codée grâce au micro-framework Silex.
+EstCeQueCestBientot est une appli web inspirée de estcequecestbientotlheuredemanger.fr ou hasthelhcdestroyedtheearth.com, EstCeQueCestBientot est une application web codée grâce au micro-framework Silex.
 L'idée d'origine était de créer un estcequecestbientotlheureducafe, mais dorénavant EstCeQueCestBientot permet de faire n'importe quel estcequecestbientot...
 
 Configuration
