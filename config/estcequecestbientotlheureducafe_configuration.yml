@@ -1,0 +1,103 @@
+# This is the app name which is going to be displayed on main page and title
+app_title: "Est ce que c'est bientôt l'heure du café ?"
+
+# If no message is set, this one will be displayed
+defaultMessage: "Non ce n'est pas l'heure."
+
+# Optional
+extraMessage: "         {\n      {   }\n       }_{ __{\n    .-{   }   }-.\n   (   }     {   )\n   |`-.._____..-'|\n   |             ;--.\n   |            (__  \\\n   |             | )  )\n   |             |/  /\n   |             /  /\n   |            (  /\n   \\             y'\n    `-.._____..-'\n"
+
+# List of defined messages
+messages:
+  - message: "Va te coucher plutôt."
+    startHour: 0
+    startMinute: 0
+    endHour: 7
+    endMinute: 30
+
+  - message: "Si tu es déjà au boulot, tu mérites bien un café."
+    startHour: 7
+    startMinute: 30
+    endHour: 8
+    endMinute: 50
+    itsTime: True
+
+  - message: "A voir."
+    startHour: 8
+    startMinute: 50
+    endHour: 9
+    endMinute: 20
+
+  - message: "C'est plutot l'heure du scrum meeting."
+    startHour: 9
+    startMinute: 20
+    endHour: 9
+    endMinute: 30
+
+  - message: "Non c'est pas l'heure."
+    startHour: 9
+    startMinute: 30
+    endHour: 10
+    endMinute: 10
+
+  - message: "Presque."
+    startHour: 10
+    startMinute: 10
+    endHour: 10
+    endMinute: 20
+
+  - message: "Oui, enfin."
+    startHour: 10
+    startMinute: 20
+    endHour: 10
+    endMinute: 40
+    itsTime: True
+
+  - message: "Après l'heure c'est plus l'heure."
+    startHour: 10
+    startMinute: 40
+    endHour: 11
+    endMinute: 30
+
+  - message: "Non mais on va bientôt manger."
+    startHour: 11
+    startMinute: 30
+    endHour: 12
+    endMinute: 0
+
+  - message: "A table !"
+    startHour: 12
+    startMinute: 0
+    endHour: 13
+    endMinute: 0
+
+  - message: "Pourquoi pas."
+    startHour: 13
+    startMinute: 0
+    endHour: 13
+    endMinute: 30
+
+  - message: "Oui, enfin."
+    startHour: 15
+    startMinute: 20
+    endHour: 15
+    endMinute: 40
+    itsTime: True
+
+  - message: "Non, c'est l'heure de bosser."
+    startHour: 15
+    startMinute: 40
+    endHour: 17
+    endMinute: 30
+
+  - message: "Non, mais la journée est presque finie."
+    startHour: 17
+    startMinute: 30
+    endHour: 18
+    endMinute: 0
+
+  - message: "C'est l'heure de rentrer."
+    startHour: 18
+    startMinute: 0
+    endHour: 23
+    endMinute: 59

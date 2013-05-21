@@ -1,0 +1,23 @@
+# This is the app name which is going to be displayed on main page and title
+app_title: "Est-ce que c'est bientôt la fin de la journée ?"
+
+# If no message is set, this one will be displayed
+defaultMessage: "Non ce n'est pas encore fini."
+
+# Optional
+extraMessage: "Bonne soirée ;)"
+
+# List of defined messages
+messages:
+  - message: "Oui enfin."
+    startHour: 18
+    startMinute: 0
+    endHour: 0
+    endMinute: 0
+    itsTime: True
+
+  - message: "Avant l'heure c'est pas l'heure"
+    startHour: 0
+    startMinute: 0
+    endHour: 9
+    endMinute: 0
