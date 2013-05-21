@@ -52,17 +52,15 @@ class MessageService
         $messages = $this->fetchAll();
         $message = null;
 
-        if (!empty($messages)) {
-            foreach ($messages as $msg) {
-                if ($msg->getStart() <= $dateTime && $dateTime <= $msg->getEnd()) {
-                    $message = $msg;
-                    break;
-                }
-            }
-        }
-        
-        if ($message === null) {
+        if (empty($messages)) {
             throw new MessageNotFoundException();
+        }
+
+        foreach ($messages as $msg) {
+            if ($msg->getStart() <= $dateTime && $dateTime <= $msg->getEnd()) {
+                $message = $msg;
+                break;
+            }
         }
 
         return $message;
