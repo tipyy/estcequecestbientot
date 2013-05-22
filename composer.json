@@ -1,4 +1,11 @@
 {
+    "name": "tontonDuPirox/estcequecestbientot",
+    "authors": [
+        {
+            "name": "Tonton duPirox",
+            "email": "onclebobs@gmail.com"
+        }
+    ],
     "require": {
         "silex/silex": "~1.0",
         "twig/twig": ">=1.8,<2.0-dev",
