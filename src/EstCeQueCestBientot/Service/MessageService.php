@@ -20,7 +20,8 @@ class MessageService
     /**
      * @param \EstCeQueCestBientot\Service\ConfigurationService $configurationService
      */
-    public function __construct(ConfigurationService $configurationService) {
+    public function __construct(ConfigurationService $configurationService)
+    {
         $this->configurationService = $configurationService;
     }
 
@@ -28,7 +29,8 @@ class MessageService
      * Fetching messages from the Yaml file
      * @return array
      */
-    public function fetchAll() {
+    public function fetchAll()
+    {
         $messages = array();
         $messagesFromFile = $this->configurationService->getMessages();
         foreach ($messagesFromFile as $messageFromFile) {
@@ -47,11 +49,12 @@ class MessageService
     }
 
     /**
-     * @param \DateTime $dateTime
+     * @param  \DateTime                $dateTime
      * @return Message
      * @throws MessageNotFoundException
      */
-    public function getMessageAt(\DateTime $dateTime) {
+    public function getMessageAt(\DateTime $dateTime)
+    {
         $messages = $this->fetchAll();
         $message = null;
 

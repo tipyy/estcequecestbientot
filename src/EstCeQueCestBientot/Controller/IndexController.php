@@ -9,12 +9,13 @@ use EstCeQueCestBientot\Exception\MessageNotFoundException;
 /**
  * Unique controller handling messages and returning them to the twig template
  */
-class IndexController {
-
+class IndexController
+{
     /**
      * @param Application $app
      */
-    public function indexAction(Application $app) {
+    public function indexAction(Application $app)
+    {
         $now = new \DateTime();
 
         try {

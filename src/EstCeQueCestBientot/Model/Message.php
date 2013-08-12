@@ -5,8 +5,8 @@ namespace EstCeQueCestBientot\Model;
 /**
  * Class defining a Message
  */
-class Message {
-
+class Message
+{
     /**
      * @var string
      */
@@ -30,7 +30,8 @@ class Message {
     /**
      * Constructor
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->start = new \DateTime();
         $this->end = new \DateTime();
         $this->itsTime = false;
@@ -40,18 +41,21 @@ class Message {
      * Returns the message start datetime
      * @return \DateTime
      */
-    public function getStart() {
+    public function getStart()
+    {
         return $this->start;
     }
 
     /**
      * Sets the message start datetime
-     * @param int $startHour
-     * @param int $startMinute
+     * @param  int     $startHour
+     * @param  int     $startMinute
      * @return Message
      */
-    public function setStart($startHour, $startMinute) {
+    public function setStart($startHour, $startMinute)
+    {
         $this->start->setTime($startHour, $startMinute, 0);
+
         return $this;
     }
 
@@ -59,18 +63,21 @@ class Message {
      * Returns the message end datetime
      * @return \DateTime
      */
-    public function getEnd() {
+    public function getEnd()
+    {
         return $this->end;
     }
 
     /**
      * Sets the message end datetime
-     * @param int $startHour
-     * @param int $startMinute
+     * @param  int     $startHour
+     * @param  int     $startMinute
      * @return Message
      */
-    public function setEnd($startHour, $startMinute) {
+    public function setEnd($startHour, $startMinute)
+    {
         $this->end->setTime($startHour, $startMinute, 0);
+
         return $this;
     }
 
@@ -78,17 +85,20 @@ class Message {
      * Gets the message to be displayed
      * @return string
      */
-    public function getMessage() {
+    public function getMessage()
+    {
         return $this->message;
     }
 
     /**
      * Sets the message to be displayed
-     * @param string $message
+     * @param  string  $message
      * @return Message
      */
-    public function setMessage($message) {
+    public function setMessage($message)
+    {
         $this->message = $message;
+
         return $this;
     }
 
@@ -96,19 +106,21 @@ class Message {
      * Gets the coffee time flag
      * @return boolean
      */
-    public function isItTime() {
+    public function isItTime()
+    {
         return $this->itsTime;
     }
 
     /**
      * Sets the coffee time flag
-     * @param boolean $coffeeTime
+     * @param  boolean $coffeeTime
      * @return Message
      */
-    public function setItsTime($coffeeTime) {
+    public function setItsTime($coffeeTime)
+    {
         $this->itsTime = $coffeeTime;
+
         return $this;
     }
 
 }
-
