@@ -13,7 +13,7 @@ class MessageService
 {
 
     /**
-     * @var \EstCeQueCestBientot\Service\ConfigurationService 
+     * @var \EstCeQueCestBientot\Service\ConfigurationService
      */
     private $configurationService;
 
@@ -35,8 +35,11 @@ class MessageService
             $message = new Message();
             $message->setMessage($messageFromFile['message'])
                     ->setStart($messageFromFile['startHour'], $messageFromFile['startMinute'])
-                    ->setEnd($messageFromFile['endHour'], $messageFromFile['endMinute'])
-                    ->setItsTime($messageFromFile['itsTime']);
+                    ->setEnd($messageFromFile['endHour'], $messageFromFile['endMinute']);
+            if (array_key_exists('itsTime', $messageFromFile)) {
+                $message->setItsTime($messageFromFile['itsTime']);
+            }
+
             $messages[] = $message;
         }
 
