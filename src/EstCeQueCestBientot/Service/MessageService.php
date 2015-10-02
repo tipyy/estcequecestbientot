@@ -68,6 +68,10 @@ class MessageService
                 break;
             }
         }
+        
+        if (empty($message)) {
+            throw new MessageNotFoundException();
+        }
 
         return $message;
     }
