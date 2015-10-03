@@ -1,5 +1,5 @@
-composer.phar
+.vagrant
+bin
+logs
 vendor
-nbproject
-test
-bin/
+
