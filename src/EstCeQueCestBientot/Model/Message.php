@@ -52,9 +52,9 @@ class Message
      * @param  int     $startMinute
      * @return Message
      */
-    public function setStart($startHour, $startMinute)
+    public function setStart($startTime)
     {
-        $this->start->setTime($startHour, $startMinute, 0);
+        $this->start = \DateTime::createFromFormat('H:i', $startTime);
 
         return $this;
     }
@@ -74,9 +74,9 @@ class Message
      * @param  int     $startMinute
      * @return Message
      */
-    public function setEnd($startHour, $startMinute)
+    public function setEnd($endTime)
     {
-        $this->end->setTime($startHour, $startMinute, 0);
+        $this->end = \DateTime::createFromFormat('H:i', $endTime);
 
         return $this;
     }

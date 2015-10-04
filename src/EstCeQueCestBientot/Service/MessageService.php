@@ -36,8 +36,8 @@ class MessageService
         foreach ($messagesFromFile as $messageFromFile) {
             $message = new Message();
             $message->setMessage($messageFromFile['message'])
-                    ->setStart($messageFromFile['startHour'], $messageFromFile['startMinute'])
-                    ->setEnd($messageFromFile['endHour'], $messageFromFile['endMinute']);
+                    ->setStart($messageFromFile['startTime'])
+                    ->setEnd($messageFromFile['endTime']);
             if (array_key_exists('itsTime', $messageFromFile)) {
                 $message->setItsTime($messageFromFile['itsTime']);
             }
