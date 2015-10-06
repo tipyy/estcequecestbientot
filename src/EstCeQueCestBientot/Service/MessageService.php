@@ -11,7 +11,6 @@ use EstCeQueCestBientot\Service\ConfigurationService;
  */
 class MessageService
 {
-
     /**
      * @var \EstCeQueCestBientot\Service\ConfigurationService
      */
@@ -33,6 +32,7 @@ class MessageService
     {
         $messages = array();
         $messagesFromFile = $this->configurationService->getMessages();
+        
         foreach ($messagesFromFile as $messageFromFile) {
             $message = new Message();
             $message->setMessage($messageFromFile['message'])
@@ -75,5 +75,4 @@ class MessageService
 
         return $message;
     }
-
 }
