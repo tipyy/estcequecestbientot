@@ -12,16 +12,16 @@ use EstCeQueCestBientot\Service\ConfigurationService;
 class MessageService
 {
     /**
-     * @var \EstCeQueCestBientot\Service\ConfigurationService
+     * @var array
      */
-    private $configurationService;
+    private $yamlParser;
 
     /**
-     * @param \EstCeQueCestBientot\Service\ConfigurationService $configurationService
+     * @param $configFile
      */
-    public function __construct(ConfigurationService $configurationService)
+    public function __construct($configFile)
     {
-        $this->configurationService = $configurationService;
+        $this->yamlParser = Yaml::parse($configFile);
     }
 
     /**
@@ -31,7 +31,7 @@ class MessageService
     public function fetchAll()
     {
         $messages = array();
-        $messagesFromFile = $this->configurationService->getMessages();
+        $messagesFromFile = $this->yamlParser['messages'];
         
         foreach ($messagesFromFile as $messageFromFile) {
             $message = new Message();
