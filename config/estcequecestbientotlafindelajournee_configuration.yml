@@ -10,14 +10,10 @@ extraMessage: "Bonne soirée ;)"
 # List of defined messages
 messages:
   - message: "Oui enfin."
-    startHour: 18
-    startMinute: 0
-    endHour: 0
-    endMinute: 0
+    startTime: 18:00
+    endTime: 00:00
     itsTime: True
 
   - message: "Avant l'heure c'est pas l'heure"
-    startHour: 0
-    startMinute: 0
-    endHour: 9
-    endMinute: 0
+    startTime: 00:00
+    endTime: 9:00

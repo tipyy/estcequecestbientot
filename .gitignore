@@ -1,5 +1,6 @@
 .vagrant
 bin
+build
 logs
 vendor
 

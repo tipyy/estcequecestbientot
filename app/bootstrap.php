@@ -16,7 +16,7 @@ $app['config.service'] = $app->share(function() {
     return new ConfigurationService(__DIR__.'/../config/estcequecestbientotlheureducafe_configuration.yml');
 });
 $app['message.service'] = $app->share(function($app) {
-    return new MessageService($app['config.service']);
+    return new MessageService(__DIR__.'/../config/estcequecestbientotlheureducafe_configuration.yml');
 });
 
 $app->get('/', 'EstCeQueCestBientot\Controller\IndexController::indexAction');

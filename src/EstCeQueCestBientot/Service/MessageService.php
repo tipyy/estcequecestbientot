@@ -11,18 +11,17 @@ use EstCeQueCestBientot\Service\ConfigurationService;
  */
 class MessageService
 {
+    /**
+     * @var array
+     */
+    private $yamlParser;
 
     /**
-     * @var \EstCeQueCestBientot\Service\ConfigurationService
+     * @param $configFile
      */
-    private $configurationService;
-
-    /**
-     * @param \EstCeQueCestBientot\Service\ConfigurationService $configurationService
-     */
-    public function __construct(ConfigurationService $configurationService)
+    public function __construct($configFile)
     {
-        $this->configurationService = $configurationService;
+        $this->yamlParser = Yaml::parse($configFile);
     }
 
     /**
@@ -32,12 +31,13 @@ class MessageService
     public function fetchAll()
     {
         $messages = array();
-        $messagesFromFile = $this->configurationService->getMessages();
+        $messagesFromFile = $this->yamlParser['messages'];
+        
         foreach ($messagesFromFile as $messageFromFile) {
             $message = new Message();
             $message->setMessage($messageFromFile['message'])
-                    ->setStart($messageFromFile['startHour'], $messageFromFile['startMinute'])
-                    ->setEnd($messageFromFile['endHour'], $messageFromFile['endMinute']);
+                    ->setStart($messageFromFile['startTime'])
+                    ->setEnd($messageFromFile['endTime']);
             if (array_key_exists('itsTime', $messageFromFile)) {
                 $message->setItsTime($messageFromFile['itsTime']);
             }
@@ -75,5 +75,4 @@ class MessageService
 
         return $message;
     }
-
 }

@@ -31,5 +31,4 @@ class IndexController
                     'message' => $message
         ));
     }
-
 }
